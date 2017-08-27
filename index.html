@@ -173,6 +173,10 @@
       
         <h5 id="1-How-to-enable-SSH-on-ubuntu"><a href="#1-How-to-enable-SSH-on-ubuntu" class="headerlink" title="1.How to enable SSH on ubuntu"></a>1.How to enable SSH on ubuntu</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt install openssh-server -y</div><div class="line">sudo service ssh status</div></pre></td></tr></table></figure>
 <h5 id="2-Windows-upload-file-to-Linux"><a href="#2-Windows-upload-file-to-Linux" class="headerlink" title="2.Windows upload file to Linux"></a>2.Windows upload file to Linux</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pscp -r d:\123\test.txt user@192.168.1.1:/home/<span class="built_in">test</span></div></pre></td></tr></table></figure>
+<h5 id="3-Linux-download-file-to-Windows"><a href="#3-Linux-download-file-to-Windows" class="headerlink" title="3.Linux download file to Windows"></a>3.Linux download file to Windows</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pscp -r user@192.168.1.1:/home/<span class="built_in">test</span> d:\123\test.txt</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/08/26/ubuntuset/#more">more >></a>
+        
       
 
       

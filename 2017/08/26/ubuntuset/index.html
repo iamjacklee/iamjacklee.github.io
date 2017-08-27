@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Ubuntu17.04 something setting | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test">
+  <meta name="description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test 3.Linux download file to Win">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu17.04 something setting">
 <meta property="og:url" content="http://yoursite.com/2017/08/26/ubuntuset/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test">
-<meta property="og:updated_time" content="2017-08-26T07:52:03.848Z">
+<meta property="og:description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test 3.Linux download file to Win">
+<meta property="og:updated_time" content="2017-08-27T02:53:02.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu17.04 something setting">
-<meta name="twitter:description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test">
+<meta name="twitter:description" content="1.How to enable SSH on ubuntu12sudo apt install openssh-server -ysudo service ssh status 2.Windows upload file to Linux1pscp -r d:\123\test.txt user@192.168.1.1:/home/test 3.Linux download file to Win">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -175,6 +175,17 @@
       
         <h5 id="1-How-to-enable-SSH-on-ubuntu"><a href="#1-How-to-enable-SSH-on-ubuntu" class="headerlink" title="1.How to enable SSH on ubuntu"></a>1.How to enable SSH on ubuntu</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt install openssh-server -y</div><div class="line">sudo service ssh status</div></pre></td></tr></table></figure>
 <h5 id="2-Windows-upload-file-to-Linux"><a href="#2-Windows-upload-file-to-Linux" class="headerlink" title="2.Windows upload file to Linux"></a>2.Windows upload file to Linux</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pscp -r d:\123\test.txt user@192.168.1.1:/home/<span class="built_in">test</span></div></pre></td></tr></table></figure>
+<h5 id="3-Linux-download-file-to-Windows"><a href="#3-Linux-download-file-to-Windows" class="headerlink" title="3.Linux download file to Windows"></a>3.Linux download file to Windows</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pscp -r user@192.168.1.1:/home/<span class="built_in">test</span> d:\123\test.txt</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="4-How-to-install-remarkable-on-ubuntu"><a href="#4-How-to-install-remarkable-on-ubuntu" class="headerlink" title="4.How to install remarkable on ubuntu"></a>4.How to install remarkable on ubuntu</h5><p><a href="https://remarkableapp.github.io/linux/download.html" target="_blank" rel="external">https://remarkableapp.github.io/linux/download.html</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/user/Downloads</div><div class="line">sudo dpkg -i remarkable_1.87._all.deb</div><div class="line">sudo apt --fix-broken install</div><div class="line">remarkable</div></pre></td></tr></table></figure></p>
+<h5 id="5-How-to-install-chrome-on-ubuntu"><a href="#5-How-to-install-chrome-on-ubuntu" class="headerlink" title="5.How to install chrome on ubuntu"></a>5.How to install chrome on ubuntu</h5><h6 id="1-Download-chrome"><a href="#1-Download-chrome" class="headerlink" title="(1).Download chrome"></a>(1).Download chrome</h6><p>64bit<br>wget https<nolink>://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</nolink></p>
+<h6 id="2-install-chrome"><a href="#2-install-chrome" class="headerlink" title="(2).install chrome"></a>(2).install chrome</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+<p>使用以上安装命令时可能会提示缺少包，使用以下命令解决<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt install</div><div class="line">sudo apt --fix-broken install</div></pre></td></tr></table></figure></p>
+<p>on commandline use proxy to open chrome<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">google-chrome --proxy-server=<span class="string">"socks5://127.0.0.1:1080"</span></div></pre></td></tr></table></figure></p>
+<h5 id="6-install-wubi-on-ubuntu"><a href="#6-install-wubi-on-ubuntu" class="headerlink" title="6.install wubi on ubuntu"></a>6.install wubi on ubuntu</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt install ibus-table-wubi</div></pre></td></tr></table></figure>
+<p>#####7. install shadowsocks<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt update</div><div class="line">sudo apt install python-pip</div><div class="line">sudo apt install python-setuptools m2crypto</div><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure></p>
+<p>if output error then use<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt --fix-broken install</div></pre></td></tr></table></figure></p>
+
       
 
       
