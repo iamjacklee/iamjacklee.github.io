@@ -151,6 +151,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="hexo-page" class="article article-type-hexo  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/page/">使用hexo发布文章</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/08/page/" class="archive-article-date">
+  	<time datetime="2017-10-08T14:25:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1、创建文章"><a href="#1、创建文章" class="headerlink" title="1、创建文章"></a>1、创建文章</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new title</div></pre></td></tr></table></figure>
+<p>创建文章后，文件位置在 hexo\source_posts\ 下<br>使用Remarkable对该文件进行编辑即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<h4 id="2、使用以下脚本将文章提交到git"><a href="#2、使用以下脚本将文章提交到git" class="headerlink" title="2、使用以下脚本将文章提交到git"></a>2、使用以下脚本将文章提交到git</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/bash</span></div><div class="line">hexo_dir=<span class="string">"/blog"</span></div><div class="line">ghID=maxchendt</div><div class="line">cd $hexo_dir</div><div class="line">rm -rf public db.json</div><div class="line">hexo generate</div><div class="line">cd ..</div><div class="line">rm -rf $ghID.github.io</div><div class="line">git clone https://github.com/$ghID/$ghID.github.io</div><div class="line">cp -R $hexo_dir/public/* $ghID.github.io/</div><div class="line">cd $ghID.github.io</div><div class="line">git add --all</div><div class="line">git commit -m <span class="string">"$1"</span></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<p>该脚本使用方法如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./deploy.sh <span class="string">"push the first page"</span></div></pre></td></tr></table></figure></p>
+<p>其中参数 “change only one md” 将显示在 GitHub 的 commits 中。该参数给出每次 commit 的简要描述，内容根据当时的情况修改。浏览 <a href="https://maxchendt.github.io" target="_blank" rel="external">https://maxchendt.github.io</a> , 第一份博文成功！</p>
+<p>提醒：如果您想使用该脚本，下载 deploy.sh 后 (chmod +x deploy.sh)，只需要修改其中的 hexo_dir 为您本地的 /hexo-dir, 以及 ghID 为您的 GitHub 的用户名即可。</p>
+<p>参考：<a href="https://maxchendt.github.io/Blog/20160902instHexo.html#准备开博啦" target="_blank" rel="external">https://maxchendt.github.io/Blog/20160902instHexo.html#准备开博啦</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/08/page/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-install-nodejs-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
