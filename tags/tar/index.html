@@ -6,18 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://iamjacklee.github.io">
-  <title>使用hexo发布文章 | Jacklee&#39;s Git Blog</title>
+  <title>Tag: tar | Jacklee&#39;s Git Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、创建文章1hexo new title 创建文章后，文件位置在 hexo\source_posts\ 下使用Remarkable对该文件进行编辑即可12hexo ghexo s 2、使用以下脚本将文章提交到git1234567891011121314#!/bin/bashhexo_dir=&quot;/blog&quot;ghID=maxchendtcd $hexo_dirrm -rf public db.jso">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo发布文章">
-<meta property="og:url" content="https://iamjacklee.github.io/2017/10/08/page/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jacklee&#39;s Git Blog">
+<meta property="og:url" content="https://iamjacklee.github.io/tags/tar/index.html">
 <meta property="og:site_name" content="Jacklee&#39;s Git Blog">
-<meta property="og:description" content="1、创建文章1hexo new title 创建文章后，文件位置在 hexo\source_posts\ 下使用Remarkable对该文件进行编辑即可12hexo ghexo s 2、使用以下脚本将文章提交到git1234567891011121314#!/bin/bashhexo_dir=&quot;/blog&quot;ghID=maxchendtcd $hexo_dirrm -rf public db.jso">
-<meta property="og:updated_time" content="2017-10-09T12:37:59.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo发布文章">
-<meta name="twitter:description" content="1、创建文章1hexo new title 创建文章后，文件位置在 hexo\source_posts\ 下使用Remarkable对该文件进行编辑即可12hexo ghexo s 2、使用以下脚本将文章提交到git1234567891011121314#!/bin/bashhexo_dir=&quot;/blog&quot;ghID=maxchendtcd $hexo_dirrm -rf public db.jso">
+<meta name="twitter:title" content="Jacklee&#39;s Git Blog">
   
     <link rel="alternative" href="/atom.xml" title="Jacklee&#39;s Git Blog" type="application/atom+xml">
   
@@ -153,170 +149,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="hexo-page" class="article article-type-hexo " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      使用hexo发布文章
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/17/usetar/" class="archive-article-date">
+  	<time datetime="2017-10-17T13:14:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/17/usetar/">How to use tar command on ubuntu</a>
     </h1>
   
 
-        
-        <a href="/2017/10/08/page/" class="archive-article-date">
-  	<time datetime="2017-10-08T14:25:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1、创建文章"><a href="#1、创建文章" class="headerlink" title="1、创建文章"></a>1、创建文章</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new title</div></pre></td></tr></table></figure>
-<p>创建文章后，文件位置在 hexo\source_posts\ 下<br>使用Remarkable对该文件进行编辑即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
-<h4 id="2、使用以下脚本将文章提交到git"><a href="#2、使用以下脚本将文章提交到git" class="headerlink" title="2、使用以下脚本将文章提交到git"></a>2、使用以下脚本将文章提交到git</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/bash</span></div><div class="line">hexo_dir=<span class="string">"/blog"</span></div><div class="line">ghID=maxchendt</div><div class="line">cd $hexo_dir</div><div class="line">rm -rf public db.json</div><div class="line">hexo generate</div><div class="line">cd ..</div><div class="line">rm -rf $ghID.github.io</div><div class="line">git clone https://github.com/$ghID/$ghID.github.io</div><div class="line">cp -R $hexo_dir/public/* $ghID.github.io/</div><div class="line">cd $ghID.github.io</div><div class="line">git add --all</div><div class="line">git commit -m <span class="string">"$1"</span></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>该脚本使用方法如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./deploy.sh <span class="string">"push the first page"</span></div></pre></td></tr></table></figure></p>
-<p>其中参数 “change only one md” 将显示在 GitHub 的 commits 中。该参数给出每次 commit 的简要描述，内容根据当时的情况修改。浏览 <a href="https://maxchendt.github.io" target="_blank" rel="external">https://maxchendt.github.io</a> , 第一份博文成功！</p>
-<p>提醒：如果您想使用该脚本，下载 deploy.sh 后 (chmod +x deploy.sh)，只需要修改其中的 hexo_dir 为您本地的 /hexo-dir, 以及 ghID 为您的 GitHub 的用户名即可。</p>
-<p>参考：<a href="https://maxchendt.github.io/Blog/20160902instHexo.html#准备开博啦" target="_blank" rel="external">https://maxchendt.github.io/Blog/20160902instHexo.html#准备开博啦</a></p>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tar</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://iamjacklee.github.io/2017/10/08/page/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/10/10/robo3t/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          robo3t can not open
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/08/27/install-nodejs-hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Install nodejs hexo</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -339,9 +225,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
